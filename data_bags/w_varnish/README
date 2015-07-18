@@ -1,7 +1,0 @@
-in this folder create geoip.json with following content:
-
-{
-  "id": "geoip",
-  "maxmind_userid": "xxxxx",
-  "maxmind_licensekey": "xxxxxxxxx"
-}

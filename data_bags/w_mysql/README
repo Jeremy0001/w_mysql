@@ -1,6 +1,0 @@
-in this folder create root_credential.json with following content:
-
-{
-  "id": "root_credential",
-  "root_password": "ilikerandompasswords"
-}
