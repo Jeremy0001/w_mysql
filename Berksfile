@@ -13,3 +13,7 @@ cookbook 'sudo'
 cookbook 'timezone-ii'
 
 cookbook 'mysql'
+
+group :wrapper do
+  cookbook 'w_mysql', path: './'
+end
