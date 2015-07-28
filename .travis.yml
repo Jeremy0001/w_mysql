@@ -1,0 +1,16 @@
+language: ruby
+bundler_args: --without kitchen_vagrant
+rvm:
+  - 2.2.2
+  - 2.1.6
+cache: bundler
+env:
+  matrix:
+    - CHEF_VERSION=12.3.0
+    - CHEF_VERSION=12.4.1
+before_script:
+  - "gem install bundler-audit --no-rdoc --no-ri && bundle-audit update"
+script:
+  - bundle-audit check
+  - bundle exec rake foodcritic
+  - bundle exec rake chefspec
