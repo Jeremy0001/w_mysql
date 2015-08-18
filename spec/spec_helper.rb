@@ -26,6 +26,6 @@ end
 
 RSpec.configure do |config|
   config.platform = 'ubuntu'
-  config.version = '12.04'
+  config.version = '14.04'
   config.filter_run_excluding skip: true
 end
