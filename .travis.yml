@@ -6,8 +6,9 @@ rvm:
 cache: bundler
 env:
   matrix:
-    - CHEF_VERSION=12.3.0
-    - CHEF_VERSION=12.4.1
+    - CHEF_VERSION=12.6.0
+    - CHEF_VERSION=12.5.1    
+    - CHEF_VERSION=12.4.3
 before_script:
   - "gem install bundler-audit --no-rdoc --no-ri && bundle-audit update"
 script:
