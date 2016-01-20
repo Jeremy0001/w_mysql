@@ -15,5 +15,6 @@ cookbook 'timezone-ii'
 cookbook 'mysql'
 
 group :wrapper do
+  cookbook 'w_common', git: 'https://github.com/haapp/w_common.git'
   cookbook 'w_mysql', path: './'
 end
