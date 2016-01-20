@@ -6,8 +6,9 @@ describe 'w_mysql::default' do
 
     let(:web_apps) do
       [
-        { vhost: {main_domain: 'examplewebsite.com'}, connection_domain: { webapp_domain: 'webapp.examplewebsite.com' }, mysql: [ { db: 'db1', user: 'user', password: 'pw' } ] },
-        { vhost: {main_domain: 'ex.com'}, connection_domain: { webapp_domain: 'webapp.examplewebsite.com' }, mysql: [ { db: 'db2', user: 'user', password: 'pw' } ] }
+        { vhost: {main_domain: 'example.com'}, connection_domain: { webapp_domain: 'webapp.example.com' }, mysql: [ { db: 'db1', user: 'user', password: 'pw' } ] },
+        { vhost: {main_domain: 'ex.com'}, connection_domain: { webapp_domain: 'webapp.example.com' }, mysql: [ { db: ['db2', 'db3', 'db4'], user: 'user', password: 'pw' } ] },
+        { vhost: {main_domain: 'vhost-without-connectiondomain-and-mysql.com'}}
       ]
     end
 
@@ -15,7 +16,7 @@ describe 'w_mysql::default' do
       ChefSpec::SoloRunner.new do |node|
         node.set['w_common']['web_apps'] = web_apps
         node.set['dbhosts']['webapp_ip'] = ['1.1.1.1', '2.2.2.2']
-        node.automatic['hostname'] = '0db.examplewebsite.com'
+        node.automatic['hostname'] = 'dbhost.example.com'
       end.converge(described_recipe)
     end
 
