@@ -1,9 +1,9 @@
 [submodule "test/fixtures/environments"]
 	path = test/fixtures/environments
-	url = https://github.com/haapp/serverspec-environments.git
+	url = https://github.com/jeremy0001/serverspec-environments.git
 [submodule "test/fixtures/roles"]
 	path = test/fixtures/roles
-	url = https://github.com/haapp/serverspec-roles.git
+	url = https://github.com/jeremy0001/serverspec-roles.git
 [submodule "test/integration/test_w_mysql"]
 	path = test/integration/test_w_mysql
-	url = https://github.com/haapp/serverspec-w_mysql.git
+	url = https://github.com/jeremy0001/serverspec-w_mysql.git
